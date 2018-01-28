@@ -1,0 +1,35 @@
+$def with(asistencias, alumnos)
+<h3>
+    <a href="/asistencias"> Asistencias</a>
+</h3>
+<form action="" method="post" enctype="multipart/form-data">
+    <table id="datos_tabla" class="table table-hover" cellspacing="0" width="100%">
+        <thead>
+            <th>Asistencia</th>
+            <th>Nombre - Grupo</th>
+            <th>Grupo</th>
+        </thead>
+
+        <tbody>
+            
+                $for item in alumnos:
+                    <tr>
+                        <td>
+                            <input type="hidden" id="id_alumno" name="id_alumno" value=$item.id_alumno />
+                            <input type="hidden" name="asistio" value=0><input type="checkbox" onclick="this.previousSibling.value=1-this.previousSibling.value">
+                        </td>
+                        <td>$item.nombre_alumno</td>
+                        <td>$item.grupo</td>
+                    </tr>
+            
+        </tbody>
+
+    </table>
+    <div class="form-group">
+            <label></label>
+            <button id="send" name="send" class="form-control">
+                <span class="glyphicon glyphicon-save"></span> Asistencia</button>
+        </div>
+    </form>
+<br>
+<br>

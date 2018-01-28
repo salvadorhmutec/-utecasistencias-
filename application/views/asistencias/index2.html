@@ -1,0 +1,19 @@
+$def with(asistencias, alumnos)
+<h3>
+    <a href="/asistencias"> Asistenciasddd</a>
+</h3>
+<form action="" method="post" enctype="multipart/form-data"></form>
+    $for item in alumnos:
+        <input type="hidden" id="id_alumno[]" name="id_alumno[]" value=$item.id_alumno/>
+        
+        <input type="checkbox" id="asistio[]" name="asistio[]" class="form-control" value="si"> 
+                
+        <label for="asistio">$item.nombre_alumno $item.grupo</label>
+<div class="form-group">
+    <label></label>
+    <button id="send" name="send" class="form-control">
+        <span class="glyphicon glyphicon-save"></span> Asistencia</button>
+</div>
+</form>
+<br>
+<br>

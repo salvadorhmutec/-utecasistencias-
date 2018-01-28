@@ -1,0 +1,43 @@
+$def with(alumnos, message)
+<h3>
+    <a href="/alumnos"><span class="glyphicon glyphicon-file"></span> alumnos</a>
+</h3>
+$if message != None:
+    <div class="alert alert-warning">
+        <strong>Advertencia </strong> $message
+    </div>
+    <br>
+<form action="" method="post" enctype="multipart/form-data">
+    <input type="hidden" name="id_alumno" id="id_alumno" value="$alumnos.id_alumno" />
+
+    <div class="form-group">
+    <label>nombre_alumno</label>
+    <input required id="nombre_alumno" type="text" class="form-control" name="nombre_alumno" size="30" value="$alumnos.nombre_alumno"/>
+</div><div class="form-group">
+    <label>matricula</label>
+    <input required id="matricula" type="text" class="form-control" name="matricula" size="30" value="$alumnos.matricula"/>
+</div><div class="form-group">
+    <label>grupo</label>
+    <input required id="grupo" type="text" class="form-control" name="grupo" size="30" value="$alumnos.grupo"/>
+</div><div class="form-group">
+    <label>nombre_padre</label>
+    <input required id="nombre_padre" type="text" class="form-control" name="nombre_padre" size="30" value="$alumnos.nombre_padre"/>
+</div><div class="form-group">
+    <label>direccion</label>
+    <input required id="direccion" type="text" class="form-control" name="direccion" size="30" value="$alumnos.direccion"/>
+</div><div class="form-group">
+    <label>telefono</label>
+    <input required id="telefono" type="text" class="form-control" name="telefono" size="30" value="$alumnos.telefono"/>
+</div><div class="form-group">
+    <label>id_telegram</label>
+    <input required id="id_telegram" type="text" class="form-control" name="id_telegram" size="30" value="$alumnos.id_telegram"/>
+</div>
+
+    <div class="form-group">
+        <label></label>
+        <button id="send" name="send" class="form-control"><span class="glyphicon glyphicon-pencil"></span> Edit</button>
+    </div>
+</form>
+<br>
+<br>
+<br>
