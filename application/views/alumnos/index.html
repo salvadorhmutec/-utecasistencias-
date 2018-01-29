@@ -7,8 +7,7 @@ $def with(alumnos)
         <th>ID</th>
         <th>Alumno</th>
         <th>Grupo</th>
-        <th>Edit</th>
-        <th>Delete</th>
+        <th>Opciones</th>
     </thead>
     <tbody>
         $for item in alumnos:
@@ -16,8 +15,10 @@ $def with(alumnos)
             <td><a href='/alumnos/view/$item.id_alumno'>$item.id_alumno.split("!")[0]</a></td>
             <td><a href='/alumnos/view/$item.id_alumno'>$item.nombre_alumno</a></td>
             <td><a href='/alumnos/view/$item.id_alumno'>$item.grupo</a></td>
-            <td><a href='/alumnos/edit/$item.id_alumno'><span class="glyphicon glyphicon-pencil"></span></a></td>
-            <td><a href='/alumnos/delete/$item.id_alumno'><span class="glyphicon glyphicon-trash"></span></a></td>
+            <td>
+                <a href='/alumnos/edit/$item.id_alumno'><span class="glyphicon glyphicon-pencil"></span></a>
+                <a href='/alumnos/delete/$item.id_alumno'><span class="glyphicon glyphicon-trash"></span></a>
+            </td>
         </tr>
     </tbody>
 </table>
